@@ -1,32 +1,49 @@
-.escudo, img{
-    width: 24px;
-    height: 24px;
+.escudo,
+img {
+  width: 24px;
+  height: 24px;
 }
 
-.conteiner {
-    margin-top: 15px;
-    margin-left: 300px;
-  }
-   
-  tr,
-  td,
-  th {
-    justify-content: space-between;
-    width: 10px;
-    margin-right: 1px;
-  }
-  
-  .table {
-    padding-right: 30px;
-    width: 800px;
+.container {
+  margin-top: 15px;
+  margin-left: 150px;
+  border-left: 100px;
+  margin-left: 100px;
+}
+
+tr,
+td,
+th {
+  width: 10px;
+  margin-right: 1px;
+}
+
+.table {
+  padding-right: 30px;
+  width: 800px;
+  margin-left: 275px;
+}
+
+.ultimos-jogos {
+  display: flex;
+  flex-direction: row;
+}
+
+.jogo {
+  margin-right: 10px;
+}
+
+/* Media query para dispositivos com largura de tela menor que 768 pixels (como smartphones) */
+@media (max-width: 767px) {
+  .container {
+    margin-left: 10px; /* Ajuste o valor conforme necessário para melhor exibição no celular */
   }
 
-  .ultimos-jogos {
-    display: flex;
-    flex-direction: row;
+  .table {
+    width: 100%; /* Ajuste a largura da tabela para ocupar toda a largura disponível */
   }
-  
+
   .jogo {
-    margin-right: 10px;
+    margin-right: 5px; /* Reduza a margem entre os jogos para melhor exibição no celular */
   }
-  
+}

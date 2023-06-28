@@ -11,6 +11,8 @@ export class TabelaBrasileiraoComponent implements OnInit {
 
   dadosDaAPI: any;
 
+
+
   constructor(private http: HttpClient, private service: TabelaServiceService) { }
 
   ngOnInit() {
