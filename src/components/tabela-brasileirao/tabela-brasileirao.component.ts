@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TabelaServiceService } from 'src/services/tabela-service.service';
 
@@ -7,7 +7,7 @@ import { TabelaServiceService } from 'src/services/tabela-service.service';
   templateUrl: './tabela-brasileirao.component.html',
   styleUrls: ['./tabela-brasileirao.component.scss']
 })
-export class TabelaBrasileiraoComponent {
+export class TabelaBrasileiraoComponent implements OnInit {
 
   dadosDaAPI: any;
 
@@ -16,6 +16,7 @@ export class TabelaBrasileiraoComponent {
   ngOnInit() {
     this.service.obterDadosTabela().subscribe((dados) => {
       this.dadosDaAPI = dados;
+      console.log(dados)
     });
   }
 }

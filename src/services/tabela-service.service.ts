@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { TimeComponent } from 'src/components/time/time.component';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class TabelaServiceService {
 
-  private apiUrl = 'https://api.api-futebol.com.br/v1/campeonatos/10/rodadas';
+  private apiUrl = 'https://api.api-futebol.com.br/v1/campeonatos/10/tabela';
   private apiKey:string = environment.apiKey
 
 
