@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { TabelaBrasileiraoComponent } from 'src/components/tabela-brasileirao/tabela-brasileirao.component';
+
+import { HeaderComponent } from 'src/components/header/header.component';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TabelaBrasileiraoComponent,
+    HeaderComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+ 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

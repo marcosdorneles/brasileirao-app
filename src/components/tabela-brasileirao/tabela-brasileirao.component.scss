@@ -1,0 +1,32 @@
+.escudo, img{
+    width: 24px;
+    height: 24px;
+}
+
+.conteiner {
+    margin-top: 15px;
+    margin-left: 500px;
+  }
+   
+  tr,
+  td,
+  th {
+    justify-content: space-between;
+    width: 10px;
+    margin-right: 1px;
+  }
+  
+  .table {
+    padding-right: 30px;
+    width: 800px;
+  }
+
+  .ultimos-jogos {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .jogo {
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,41 @@
+<div class="header">
+<app-header></app-header>
+</div>
+<div class="conteiner">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Posição</th>
+        <th scope="col">Time</th>
+        <th scope="col">Pontos</th>
+        <th scope="col">Últimos Jogos</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let time of dadosDaAPI">
+      {{
+        time.time.ultimos_jogos
+      }}
+      <tr>
+        <td>{{ time.posicao }}</td>
+        <td class="escudo">
+          <img src="{{ time.time.escudo }}" alt="Escudo do time" />
+          {{ time.time.nome_popular }}
+        </td>
+        <td>{{ time.pontos }}</td>
+        <td>
+          <div class="ultimos-jogos">
+            <div *ngFor="let jogo of time.ultimos_jogos" class="jogo">
+              <img *ngIf="jogo === 'v'" src="assets/verificado.png" alt="Vitoria" />
+              <!-- <span *ngIf="jogo !== 'd'">{{ jogo }}</span> -->
+              <img *ngIf="jogo === 'd'" src="assets/fechar.png" alt="Derrota" />
+              <!-- <span *ngIf="jogo !== 'e'">{{ jogo }}</span> -->
+              <img *ngIf="jogo === 'e'" src="assets/minus-big-symbol.png" alt="Empate" />
+              <!-- <span *ngIf="jogo !== 'e'">{{ jogo }}</span> -->
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
