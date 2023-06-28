@@ -36,14 +36,13 @@ th {
 /* Media query para dispositivos com largura de tela menor que 768 pixels (como smartphones) */
 @media (max-width: 767px) {
   .container {
-    margin-left: 10px; /* Ajuste o valor conforme necessário para melhor exibição no celular */
+    margin-left: 0; /* Remover a margem esquerda */
+    padding: 10px;
+    border-left: 0; /* Remover a borda esquerda */
   }
 
   .table {
-    width: 100%; /* Ajuste a largura da tabela para ocupar toda a largura disponível */
-  }
-
-  .jogo {
-    margin-right: 5px; /* Reduza a margem entre os jogos para melhor exibição no celular */
+    margin-left: 0; /* Remover a margem esquerda */
+    width: 100%; /* Definir a largura da tabela para ocupar toda a largura disponível */
   }
 }
